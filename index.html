@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTOCODE</title>
+</head>
+<body>
+   
+<div id="main">
+<ul id="list">
+    <li>html</li>
+    <li>css</li>
+</ul>
+</div>
+<div id="copyright">(c) INTOCODE</div>
+<script>
+const addTitel = () => {
+const h1 = document.createElement('h1')
+h1.textContent = 'Работа с DOM'
+document.body.prepend(h1)
+console.log(h1)
+    }
+
+const addendum = () => {
+const main = document.getElementById('main')
+const a = document.createElement('a')
+a.href = 'https://learn.javascript.ru/dom-nodes'
+a.target = '_blank'
+a.textContent = 'DOM'
+main.append(a)
+console.log(main)
+
+}
+
+const color = (arg) => {
+const body = document.querySelector('body')
+document.body.style.background = arg
+console.log(body)
+}
+
+const postTeg = (text) => {
+const li = document.createElement('li')
+const list = document.getElementById('list')
+li.textContent = text
+list.append(li)
+console.log(li)
+}
+
+const removeTeg = () => {
+    const copyright = document.getElementById('copyright')
+    copyright.remove()
+  
+}
+
+removeTeg()
+postTeg('+79226661313')
+addTitel()
+addendum()
+color('red')
+</script>
+    
+</body>
+</html>
